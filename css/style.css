@@ -1,0 +1,188 @@
+
+@media screen {
+    #logo {                   /* Logo animation starts */
+        width: 25px;
+        opacity: 0;
+        animation: logo-animation 5s forwards;
+    }
+      
+    @keyframes logo-animation {
+        0% {
+          width: 25px;
+          opacity: 0;
+        }
+        100% {
+          width: 475px;
+          opacity: 1;
+        }
+    }
+    /* Logo animation ends */
+
+    body{               /*Changing font. background color, and background image */
+        font-family: 'Poppins', 'sans-serif';
+        background-image: url(../images/concrete_seamless.png);
+        background-color: #f1f1f1;
+    }
+
+    header{        /* Header styling */
+        display: flex ;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links{     /* Navigation bar styling */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav_links li{
+        list-style: none;
+    }
+
+    .nav_links li a:visited{
+        color: #0000FF;
+    }
+    /* Navigation bar styling ends */
+
+    .card > header {     /* Card header styling */
+        background-color: #288088;
+        border-style: solid;
+        border-color: #45ADAD;
+        border-width: 2px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 50px 50px 0px 0px;
+    }
+    /* Card header styling ends */
+
+    .card{    /* Card class styling */
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50px 50px 0px 0px;
+    }
+    /* Card class styling ends */
+
+
+    .pricing{       /* Pricing class styling */
+        display: flex;
+        flex-direction: column;
+    }
+    /* Pricing class styling ends */
+
+    .gallery > img{        /* Gallery image styling */
+        border-style: solid;
+        border-color: #50C7C7;
+        border-width: 10px;
+        margin: 10px;
+        width: 300px;
+    }
+    /* Gallery image styling ends */
+    
+    .gallery{     /* Gallery class styling */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /* Gallery class styling ends */
+}
+/* Media queries for large screen sizes, styling different requirement, the order is as above.*/
+@media screen and (min-width: 900px) {
+    header{
+        display: flex ;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 275px;
+    }
+
+    body > header{
+        position: sticky;
+        top: 0;
+    
+    }
+}
+/* Media queries for reducing motion, eliminate the amination*/
+@media (prefers-reduced-motion: reduce){
+    #logo {
+        animation: none;
+    }
+}    
+
+
+/* Media queries for printing, styling for printing the page*/
+@media print {
+    body{
+        font-family: 'Arial', 'Helvetica';
+    }
+
+    
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: flex-end;
+    }
+
+    .gallery{
+        display: none;
+    }
+    #gallery{
+        display: none;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 325px;
+        border-style: solid;
+        border-color: #45ADDD;
+        border-width: 2px;
+        border-radius: 50px 50px 0px 0px;;
+    }
+
+    .card > header {
+        background-color: #288088;
+        border-style: solid;
+        border-color: #45ADDD;
+        border-width: 2px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 50px 50px 0px 0px;
+    }
+    .nav_links li a:visited{
+        color: #0000FF;
+    }
+
+
+}
